@@ -2,9 +2,11 @@ const assert = require("node:assert");
 const { randomBytes, timingSafeEqual } = require("node:crypto");
 const { promisify } = require("node:util");
 const { deserialize, serialize } = require("@phc/format");
-const gypBuild = require("node-gyp-build");
 
-const { hash: bindingsHash } = gypBuild(__dirname);
+// Determine path to native .node module
+const path = require('path');
+const moduleDir = path.dirname(require.resolve('argon2'));
+const { hash: bindingsHash } = require(path.join(moduleDir, 'build/Release/argon2.node'));
 
 /** @type {(size: number) => Promise<Buffer>} */
 const generateSalt = promisify(randomBytes);
