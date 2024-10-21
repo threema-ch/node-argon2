@@ -1,5 +1,8 @@
 # node-argon2
 
+_(Note: In this fork, we stay mostly in sync with upstream, but remove
+prebuilds to ensure that the argon library is always compiled from source.)_
+
 [![Financial contributors on Open Collective][opencollective-image]][opencollective-url]
 [![Build status][actions-image]][actions-url]
 [![NPM package][npm-image]][npm-url]
