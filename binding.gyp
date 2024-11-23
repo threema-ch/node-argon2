@@ -12,7 +12,8 @@
       ["OS == 'win'", {
         "defines+": ["_HAS_EXCEPTIONS=1"],
         "msvs_settings": {
-          "VCCLCompilerTool": { "ExceptionHandling": 1 }
+          "VCCLCompilerTool": {"ExceptionHandling": 1},
+          "VCLinkerTool": {"AdditionalOptions": ["/Brepro"]}
         }
       }]
     ],
