@@ -46,11 +46,11 @@
   },
   "dependencies": {
     "@phc/format": "^1.0.0",
-    "node-addon-api": "^8.1.0",
-    "node-gyp-build": "^4.8.1"
+    "node-addon-api": "^8.2.2",
+    "node-gyp-build": "^4.8.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.2",
+    "@biomejs/biome": "1.9.4",
     "@types/node": "20.16.1",
     "node-gyp": "10.2.0",
     "typescript": "5.6.3"
