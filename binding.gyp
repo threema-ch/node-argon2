@@ -13,7 +13,15 @@
         "defines+": ["_HAS_EXCEPTIONS=1"],
         "msvs_settings": {
           "VCCLCompilerTool": {"ExceptionHandling": 1},
-          "VCLinkerTool": {"AdditionalOptions": ["/Brepro"]}
+          "VCLinkerTool": {
+            "AdditionalOptions": [
+              # Reproducible builds: Do not include timestamps in binary
+              "/Brepro",
+              # Reproducible builds: Omit debug info (to avoid mismatching paths or RSDS signature)
+              "/DEBUG:NONE",
+              # Reproducible builds: Disable incremental building
+              "/INCREMENTAL:NO"
+            ]}
         }
       }]
     ],
