@@ -13,7 +13,13 @@
         "defines+": ["_HAS_EXCEPTIONS=1"],
         "msvs_settings": {
           "VCCLCompilerTool": {"ExceptionHandling": 1},
-          "VCLinkerTool": {"AdditionalOptions": ["/Brepro"]}
+          "VCLinkerTool": {
+            "AdditionalOptions": [
+              # Reproducible builds: Do not include timestamps in binary
+              "/Brepro",
+              # Reproducible builds: Do not include absolute paths to debug symbols in binary
+              "/PDBALTPATH:%_PDB%"
+            ]}
         }
       }]
     ],
