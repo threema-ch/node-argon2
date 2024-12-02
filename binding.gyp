@@ -17,8 +17,8 @@
             "AdditionalOptions": [
               # Reproducible builds: Do not include timestamps in binary
               "/Brepro",
-              # Reproducible builds: Do not include absolute paths to debug symbols in binary
-              "/PDBALTPATH:%_PDB%"
+              # Reproducible builds: Omit debug info (to avoid mismatching paths or RSDS signature)
+              "/DEBUG:NONE"
             ]}
         }
       }]
