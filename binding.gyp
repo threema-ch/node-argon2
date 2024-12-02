@@ -18,7 +18,9 @@
               # Reproducible builds: Do not include timestamps in binary
               "/Brepro",
               # Reproducible builds: Omit debug info (to avoid mismatching paths or RSDS signature)
-              "/DEBUG:NONE"
+              "/DEBUG:NONE",
+              # Reproducible builds: Disable incremental building
+              "/INCREMENTAL:NO"
             ]}
         }
       }]
